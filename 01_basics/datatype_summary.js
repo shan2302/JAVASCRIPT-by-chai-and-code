@@ -25,3 +25,21 @@ const MyFunction = function(){
 }
 console.log(typeof bigNumber);
 console.log(typeof MyFunction);
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+//Stack(primitive) , Heap(Non-Primitive)
+
+let myYoutubeName = "randyorton"
+let anotherName = myYoutubeName
+anotherName = "myname"
+console.log(anotherName);
+console.log(myYoutubeName); //different because it is in stack memory where it duplicates 
+let user1 = {
+    email:"abc@yahoo.com",
+    upiId: "abc@paytm"
+}
+let user2= user1
+user2.email = "abcd@gmail.com"
+console.log(user1.email);
+console.log(user2.email);//both change because it is in heap memory where it refers to only one point 
