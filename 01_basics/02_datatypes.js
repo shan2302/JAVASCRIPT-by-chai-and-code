@@ -4,7 +4,7 @@
 //alert("hello") //we are using node js,not browser
 console.log(3+3); console.log("Shantanu")
 console.log(3+3);
-console.log("SHANTANU"); //CODE READABILITY SHOULD BE HIGH
+console.log("SHANTANU singh"); //CODE READABILITY SHOULD BE HIGH
 
 let name = "shantanu"
 let age = 19
