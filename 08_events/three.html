@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Chai aur Javascript</h1>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+</body>
+<script>
+    let intervalID;  // Declare a variable to store the interval ID
+
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    }
+
+    document.querySelector("#start").addEventListener('click', function() {
+        // Clear any existing interval before setting a new one
+        if (intervalID) {
+            clearInterval(intervalID);
+        }
+        // Set a new interval and store its ID
+        intervalID = setInterval(sayDate, 1000, "hi");
+    });
+
+    document.querySelector("#stop").addEventListener('click', function() {
+        // Clear the interval only if it exists
+        if (intervalID) {
+            clearInterval(intervalID);
+            intervalID = null;  // Optional: reset the ID
+            console.log("Interval stopped");
+        }
+    });
+</script>
+</html>
