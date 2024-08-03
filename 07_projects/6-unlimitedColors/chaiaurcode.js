@@ -22,5 +22,5 @@ Start.addEventListener('click',function(){
 })
 
 Stop.addEventListener('click', function(){
-    clearInterval(intervalId)
+    clearInterval(intervalId);
 })
